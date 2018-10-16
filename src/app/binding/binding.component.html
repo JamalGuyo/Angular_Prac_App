@@ -1,0 +1,122 @@
+<div class="container-fluid">
+  <div class="jumbotron">
+    <h1>Property Bindings</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <figure class="figure">
+          <img src={{angularImg}} class="img-responsive img-thumbnail" />
+          <figcaption class="figure-caption text-center"><code>using string interpolation <kbd>2-curly-brackets</kbd></code></figcaption>
+        </figure>
+      </div>
+      <div class="col-md-4">
+        <figure class="figure">
+          <img [src]='angularImg2' class="img-responsive img-thumbnail" />
+          <figcaption class="figure-caption text-center"><code>using [] <kbd>[src]</kbd></code></figcaption>
+        </figure>
+      </div>
+      <div class="col-md-4">
+        <figure class="figure">
+          <img bind-src='angularImg3' class="img-responsive img-thumbnail">
+          <figcaption class="figure-caption text-center"><code>using bind-prefix <kbd>bind-src</kbd></code></figcaption>
+        </figure>
+      </div>
+      <br />
+    </div>
+  </div>
+
+  <div class="jumbotron">
+    <h1>Event Bindings</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <form>
+        <div class="form-group">
+          <label for="txt1">Input1</label>
+          <input type="text" name="text1" class="form-control" [disabled]="btnStatus" (mouseover)="showUp()" />
+        </div>
+        <div class="form-group">
+          <label for="txt2">Input2</label>
+          <input type="text" name="text2" class="form-control" [disabled]="btnStatus" (mouseover)="showUp()" />
+        </div>
+        <div class="form-group">
+          <input type="submit" class="btn btn-primary btn-large form-control" [disabled]="btnStatus" (click)="showUp()"
+            value="submit" />
+        </div>
+      </form>
+      <br />
+      <code>event binding <kbd>(event)</kbd></code>
+    </div>
+  </div>
+
+  <div class="jumbotron">
+    <h1>class Bindings</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <figure class="figure">
+          <img src={{angularImg4}} class="img-responsive img-thumbnail" />
+          <figcaption class="figure-caption text-center"><code>class binding <kbd>[class]</kbd></code></figcaption>
+        </figure>
+      </div>
+      <div class="col-md-4">
+        <figure class="figure">
+          <img [src]='angularImg5' class="img-responsive img-thumbnail" [class.someproperty]="someproperty" />
+          <figcaption class="figure-caption text-center"><code>class binding <kbd>[class.active]</kbd></code></figcaption>
+        </figure>
+      </div>
+      <div class="col-md-4">
+        <figure class="figure">
+          <img bind-src='angularImg6' class="img-responsive img-thumbnail" [ngClass]="setClasses()">
+          <figcaption class="figure-caption text-center"><code>class binding <kbd>[ngClass]</kbd></code></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="jumbotron">
+    <h1>Style Bindings</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <figure class="figure">
+          <img src={{angularImg7}} class="img-responsive img-thumbnail" />
+          <figcaption class="figure-caption text-center"><code>style binding <kbd>[style]</kbd></code></figcaption>
+        </figure>
+      </div>
+      <div class="col-md-4">
+        <figure class="figure">
+          <img [src]='angularImg8' class="img-responsive img-thumbnail" [style.border]="someproperty ? '4px solid red': 'none'" />
+          <figcaption class="figure-caption text-center"><code>style binding <kbd>[style.border]</kbd></code></figcaption>
+        </figure>
+      </div>
+      <div class="col-md-4">
+        <figure class="figure">
+          <img bind-src='angularImg9' class="img-responsive img-thumbnail" [ngStyle]="setStyles()">
+          <figcaption class="figure-caption text-center"><code>style binding <kbd>[ngStyle]</kbd></code></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="jumbotron">
+    <h1>Two-Way Bindings</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <form>
+        <div class="form-group">
+          <label for="txtt">Input</label>
+          <input type="text" name="txtt" class="form-control" [(ngModel)]="somevalue" />
+        </div>
+        <code>{{somevalue}}</code>
+      </form>
+      <br />
+      <code>twoway binding <kbd>([ngModel])</kbd></code>
+    </div>
+  </div>
+
+</div>

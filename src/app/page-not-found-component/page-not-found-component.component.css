@@ -1,0 +1,7 @@
+.custom {
+  border-left: 7px solid teal;
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}

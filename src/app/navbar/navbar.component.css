@@ -1,0 +1,7 @@
+.navbar-brand i {
+  transform: scale(2) rotate(65deg);
+}
+.active {
+  transition: 300ms;
+  border-bottom: 1px solid white;
+}
