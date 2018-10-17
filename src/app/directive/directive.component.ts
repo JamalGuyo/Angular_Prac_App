@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { DataService } from './../data.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-directive',
   templateUrl: './directive.component.html',
   styleUrls: ['./directive.component.css']
 })
-export class DirectiveComponent implements OnInit {
+export class DirectiveComponent {
+  users: any[];
+  viewMode = 'Nairobi';
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private data: DataService) {
+    this.users = data.users;
   }
-
 }

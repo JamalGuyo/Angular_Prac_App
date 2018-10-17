@@ -1,3 +1,4 @@
+import { FormComponent } from './form/form.component';
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { BindingComponent } from './binding/binding.component';
@@ -19,6 +20,11 @@ const routes: Routes = [
     path: 'directive',
     component: DirectiveComponent,
     data: { title: 'Directives' }
+  },
+  {
+    path: 'form',
+    component: FormComponent,
+    data: { title: 'Form' }
   },
   {
     path: '**',

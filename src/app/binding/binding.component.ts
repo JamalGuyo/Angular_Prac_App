@@ -56,4 +56,6 @@ export class BindingComponent {
     };
     return styles;
   };
+  //
+  somevalue = 'sometext';
 }

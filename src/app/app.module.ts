@@ -8,9 +8,10 @@ import { BindingComponent } from './binding/binding.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DirectiveComponent } from './directive/directive.component';
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, BindingComponent, DirectiveComponent, PageNotFoundComponentComponent],
+  declarations: [AppComponent, NavbarComponent, BindingComponent, DirectiveComponent, PageNotFoundComponentComponent, FormComponent],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]

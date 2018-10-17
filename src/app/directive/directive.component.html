@@ -1,3 +1,61 @@
-<p>
-  directive works!
-</p>
+<div class="container">
+  <!-- ngfor -->
+  <div class="jumbotron">
+    <h4><strong>*ngFor</strong> directive</h4>
+    <ul class="list-group" *ngFor="let user of users; index as i">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        {{user.name}}
+        <span class="badge badge-primary badge-pill white-text">{{i + 1}}</span>
+      </li>
+    </ul>
+  </div>
+  <div class="row">
+
+  </div>
+
+  <!-- ngif else then-->
+  <div class="jumbotron">
+    <h4><strong>*ngIf</strong> directive</h4>
+  </div>
+  <div class="row">
+    <ul class="list-group" *ngFor="let user of users">
+      <li class="list-group-item" *ngIf="user.location == 'Nairobi'">{{user.name}}</li>
+      <li class="list-group-item active" *ngIf="user.location == 'Kisumu'">{{user.name}}</li>
+    </ul>
+  </div>
+
+  <!-- ngswitch -->
+  <div class="jumbotron">
+    <h4><strong>*ngSwitch</strong> directive</h4>
+  </div>
+  <div class="row">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="viewMode == 'Nairobi'" (click)="viewMode = 'Nairobi'">
+          Nairobi
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="viewMode == 'Kisumu'" (click)="viewMode = 'Kisumu'">
+          Kisumu
+        </a>
+      </li>
+    </ul>
+
+    <div *ngFor="let user of users">
+      <ul class="list-group" [ngSwitch]="viewMode">
+        <li class="list-group-item" *ngSwitchCase="user.location">
+          {{user.name}}
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ngstyle and ngclass directive -->
+  <div class="jumbotron">
+    <code class="m-2"><kbd>[ngStyle]</kbd></code>
+    <code><kbd>[ngClass]</kbd> covered in <a routerLink=""><u>Bindings</u></a></code>
+  </div>
+
+</div>
