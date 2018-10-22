@@ -1,3 +1,4 @@
+import { MaterialComponent } from './material/material.component';
 import { FormComponent } from './form/form.component';
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
 import { DirectiveComponent } from './directive/directive.component';
@@ -25,6 +26,11 @@ const routes: Routes = [
     path: 'form',
     component: FormComponent,
     data: { title: 'Form' }
+  },
+  {
+    path: 'material',
+    component: MaterialComponent,
+    data: { title: 'Material' }
   },
   {
     path: '**',

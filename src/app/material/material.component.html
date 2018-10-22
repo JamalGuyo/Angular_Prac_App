@@ -1,3 +1,66 @@
-<p>
-  material works!
-</p>
+<div class="container">
+  <!-- //Buttons -->
+  <div class="jumbotron">
+    <h4 class="text-center">Material<strong> buttons</strong></h4>
+    <hr />
+    <button mat-button>Basic material Button</button>
+    <br />
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+      <mat-button-toggle value="bold">Bold</mat-button-toggle>
+      <mat-button-toggle value="italic">Italic</mat-button-toggle>
+      <mat-button-toggle value="underline">Underline</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
+  <br />
+  <!-- //Badges -->
+  <div class="jumbotron">
+    <h4 class="text-center">Material<strong> badges</strong></h4>
+    <hr />
+    <p>
+      <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
+    </p>
+    <p>
+      Button with a badge on the left
+      <button mat-raised-button color="primary" matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+        Action
+      </button>
+    </p>
+    <p>
+      Icon with a badge
+      <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+    </p>
+  </div>
+
+  <br />
+  <!-- //Spinner -->
+  <div class="jumbotron">
+    <h4 class="text-center">Material<strong> badges</strong></h4>
+    <hr />
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <br />
+  <!-- Snackbar -->
+  <div class="jumbotron">
+    <h4 class="text-center">Material <strong>Snackbar</strong></h4>
+    <hr />
+    <mat-form-field>
+      <input matInput value="Disco party!" placeholder="Message" #message>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput value="Dance" placeholder="Action" #action>
+    </mat-form-field>
+
+    <button mat-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
+  </div>
+
+  <br />
+  <!-- //slidertoggle -->
+  <div class="jumbotron">
+    <h4 class="text-center">Material <Strong>Slider</Strong></h4>
+    <mat-slide-toggle>Slide me!</mat-slide-toggle>
+  </div>
+
+</div>
