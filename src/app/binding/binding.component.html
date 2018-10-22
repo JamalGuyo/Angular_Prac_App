@@ -1,13 +1,14 @@
-<div class="container-fluid">
+<div class="container">
+
+  <!-- PROPERTY BINDING -->
   <div class="jumbotron">
-    <h1>Property Bindings</h1>
-  </div>
-  <div class="container">
+    <h1 class="text-center">Property Bindings</h1>
+    <hr />
     <div class="row">
       <div class="col-md-4">
         <figure class="figure">
           <img src={{angularImg}} class="img-responsive img-thumbnail" />
-          <figcaption class="figure-caption text-center"><code>using string interpolation <kbd>2-curly-brackets</kbd></code></figcaption>
+          <figcaption class="figure-caption text-center"><code>using string interpolation <kbd ngNonBindable>{{src}}</kbd></code></figcaption>
         </figure>
       </div>
       <div class="col-md-4">
@@ -26,34 +27,32 @@
     </div>
   </div>
 
+  <!-- EVENT BINDING -->
   <div class="jumbotron">
-    <h1>Event Bindings</h1>
-  </div>
-  <div class="container">
-    <div class="row">
-      <form>
-        <div class="form-group">
-          <label for="txt1">Input1</label>
-          <input type="text" name="text1" class="form-control" [disabled]="btnStatus" (mouseover)="showUp()" />
-        </div>
-        <div class="form-group">
-          <label for="txt2">Input2</label>
-          <input type="text" name="text2" class="form-control" [disabled]="btnStatus" (mouseover)="showUp()" />
-        </div>
-        <div class="form-group">
-          <input type="submit" class="btn btn-primary btn-large form-control" [disabled]="btnStatus" (click)="showUp()"
-            value="submit" />
-        </div>
-      </form>
-      <br />
-      <code>event binding <kbd>(event)</kbd></code>
-    </div>
+    <h1 class="text-center">Event Bindings</h1>
+    <hr />
+    <form>
+      <div class="form-group">
+        <label for="txt1">Input1</label>
+        <input type="text" name="text1" class="form-control" [disabled]="btnStatus" (click)="showUp()" />
+      </div>
+      <div class="form-group">
+        <label for="txt2">Input2</label>
+        <input type="text" name="text2" class="form-control" [disabled]="btnStatus" (click)="showUp()" />
+      </div>
+      <div class="form-group">
+        <input type="submit" class="btn btn-primary btn-large form-control" [disabled]="btnStatus" (click)="showUp()"
+          value="submit" />
+      </div>
+    </form>
+    <br />
+    <code>event binding <kbd>(event)</kbd></code>
   </div>
 
+  <!-- CLASS BINDING -->
   <div class="jumbotron">
-    <h1>class Bindings</h1> 
-  </div>
-  <div class="container">
+    <h1 class="text-center">class Bindings</h1>
+    <hr />
     <div class="row">
       <div class="col-md-4">
         <figure class="figure">
@@ -76,10 +75,10 @@
     </div>
   </div>
 
+  <!-- STYLE BINDING -->
   <div class="jumbotron">
-    <h1>Style Bindings</h1>
-  </div>
-  <div class="container">
+    <h1 class="text-center">Style Bindings</h1>
+    <hr />
     <div class="row">
       <div class="col-md-4">
         <figure class="figure">
@@ -102,21 +101,19 @@
     </div>
   </div>
 
+  <!-- TWO-WAY BINDING -->
   <div class="jumbotron">
-    <h1>Two-Way Bindings</h1>
-  </div>
-  <div class="container">
-    <div class="row">
-      <form>
-        <div class="form-group">
-          <label for="txtt">Input</label>
-          <input type="text" name="txtt" class="form-control" [(ngModel)]="somevalue" />
-        </div>
-        <code>{{somevalue}}</code>
-      </form>
-      <br />
-      <code>twoway binding <kbd>([ngModel])</kbd></code>
-    </div>
+    <h1 class="text-center">Two-Way Bindings</h1>
+    <hr />
+    <form>
+      <div class="form-group">
+        <label for="txtt">Input</label>
+        <input type="text" name="txtt" class="form-control" [(ngModel)]="somevalue" />
+      </div>
+      <code>{{somevalue}}</code>
+    </form>
+    <br />
+    <code>twoway binding <kbd>([ngModel])</kbd></code>
   </div>
 
 </div>

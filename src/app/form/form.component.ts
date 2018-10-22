@@ -1,15 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormControl, Validators, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent implements OnInit {
+export class FormComponent {
+  rFormGroup = new FormGroup({
+    email: new FormControl('', Validators.required),
+    pwd: new FormControl('')
+  });
 
-  constructor() { }
+  // get email(){
+  //   return this.rFormGroup.get('email');
+  // }
 
-  ngOnInit() {
+  // emailValue = this.rFormGroup.value;
+
+  // updateValue() {
+  //   this.rFormGroup.setValue('jamal@somn');
+  // }
+
+  log(x, y) {
+    console.log(x, y);
   }
-
 }

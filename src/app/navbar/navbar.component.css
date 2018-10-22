@@ -1,5 +1,5 @@
 .navbar-brand i {
-  transform: scale(2) rotate(65deg);
+  transform: scale(1.2) rotate(65deg);
 }
 .active {
   transition: 300ms;
